@@ -1,0 +1,23 @@
+<div class="container">
+  <ol>
+    <li>If the value is a multiple of 3 then output the word “Fizz”</li>
+    <li>If the value is a multiple of 5 then output the word “Buzz”</li>
+    <li>If the value is divisible by both 3 and 5 then output the word “FizzBuzz”</li>
+    <li>At the end of the run the program should display each division that was performed.</li>
+  </ol>
+</div>
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="userInput">Enter a number to be evaluated:</label>
+      <input type="text" class="form-control" id="userInput"
+             required [(ngModel)]="fizzBuzzInput" name="userInput">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="onSubmit(fizzBuzzInput)">Submit</button>
+  </form>
+</div>
+
+<div class="container" *ngIf="fizzBuzzModel?.fizzBuzzValue">
+  <h2>Result: {{fizzBuzzModel?.fizzBuzzValue}}</h2>
+</div>

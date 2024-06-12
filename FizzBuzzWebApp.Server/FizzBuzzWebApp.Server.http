@@ -1,0 +1,7 @@
+@FizzBuzzWebApp.Server_HostAddress = http://localhost:5090
+
+GET {{FizzBuzzWebApp.Server_HostAddress}}/weatherforecast/
+GET {{FizzBuzzWebApp.Server_HostAddress}}/FizzBuzzCalc/
+Accept: application/json
+
+###
