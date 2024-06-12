@@ -18,6 +18,12 @@
   </form>
 </div>
 
-<div class="container" *ngIf="fizzBuzzModel?.fizzBuzzValue">
-  <h2>Result: {{fizzBuzzModel?.fizzBuzzValue}}</h2>
+
+<h2>Result:</h2>
+<div *ngIf="fizzBuzzModel?.fizzBuzzValue" class="container">
+  <h2>{{fizzBuzzModel?.fizzBuzzValue}}</h2>
+</div>
+
+<div *ngIf="fizzBuzzModel?.fizzBuzzDivisions" class="container">
+  <h2 *ngFor="let item of fizzBuzzModel?.fizzBuzzDivisions">{{ item }}</h2>
 </div>
