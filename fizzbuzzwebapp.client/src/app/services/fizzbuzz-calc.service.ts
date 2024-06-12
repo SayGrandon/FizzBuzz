@@ -21,7 +21,7 @@ export class FizzbuzzCalcService {
 
   //calls backend service to perform fizz buzz logic
   runCalculation(input: string): Observable<FizzBuzzResponse> {
-    const apiUrl = 'http://localhost:5090/FizzBuzzCalc/';
+    const apiUrl = '/FizzBuzzCalc/';
     return this.http.get<ApiResponse>(apiUrl + input).pipe(
       map((receivedData: ApiResponse) => {
         return new FizzBuzzResponse(
